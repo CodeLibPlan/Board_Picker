@@ -13,3 +13,26 @@ header{
 footer{
     background-color:rgba(0, 255, 183, 0.3);
 }
+
+#logo{
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+#goto_add_button{
+    background-color:rgb(183, 255, 0);
+}
+#goto_show_button{
+    background-color:rgb(255, 183, 0);
+}
+#goto_add_button, #goto_show_button{
+    width:35%;
+    height:150px;
+    margin-top:100px;
+    margin-left:10%;
+    font-size:30px;
+}
+#goto_intro_from_add, #goto_intro_from_show{
+    width:35%;
+    font-size:30px;
+}
