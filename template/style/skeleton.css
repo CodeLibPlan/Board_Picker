@@ -36,3 +36,21 @@ footer{
     width:35%;
     font-size:30px;
 }
+#registered_list{
+    border:1px solid black;
+    height:80%;
+    overflow:scroll;
+}
+#registered_list li{
+    background-color:rgba(0, 0, 0, 0.1);
+    margin-top:5px;
+    font-size:20px;
+}
+#registered_list li img{
+    height:30px;
+    float:right;
+    margin-right:10px;
+}
+#registered_list div{
+    border:3px solid rgba(150, 150, 150, 0.5);
+}
