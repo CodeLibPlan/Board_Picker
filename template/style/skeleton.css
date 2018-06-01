@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(183, 183, 183);
+}
+header{
+    background-color:rgba(0, 183, 255, 0.3);
+}
+#add{
+    background-color:rgba(183, 255, 0, 0.3);
+}
+#show{
+    background-color: rgba(255, 183, 0, 0.3);
+}
+footer{
+    background-color:rgba(0, 255, 183, 0.3);
+}

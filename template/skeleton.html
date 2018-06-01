@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Picker</title>
+    <link rel="stylesheet" href="style/skeleton.css"/>
+    <script type="text/javascript" src="script/script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div>adsf</div>
+        <button onclick="goto_show(event)">등록된 알림 목록</button>
+        <button onclick="goto_add(event)">게시판 알림 등록하기</button>
+    </header>
+
+    <section id="show">
+        <button onclick="goto_header(event)">처음으로</button>
+    </section>
+    <section id="add">
+        <button onclick="goto_header(event)">처음으로</button>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        var windowheight=window.innerHeight;
+        console.log("asdf");
+        document.getElementsByTagName("header")[0].style.height=windowheight+"px";
+        document.getElementById("show").style.height=windowheight+"px";
+        document.getElementById("add").style.height=windowheight+"px";
+        document.getElementsByTagName("footer")[0].style.height=(windowheight/2)+"px";
+    </script>
+</body>
+</html>
