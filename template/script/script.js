@@ -29,11 +29,14 @@ function goto(target){
     };
     a(speed, target, distance);
 }
-function resize_elements(){
-    var windowheight=window.innerHeight;
+function resize_elements() {
+    var windowheight = window.innerHeight;
     console.log("asdf");
-    document.getElementsByTagName("header")[0].style.height=windowheight+"px";
-    document.getElementById("show").style.height=windowheight+"px";
-    document.getElementById("add").style.height=windowheight+"px";
-    document.getElementsByTagName("footer")[0].style.height=(windowheight/2)+"px";
+    document.getElementsByTagName("header")[0].style.height = windowheight + "px";
+    document.getElementById("show").style.height = windowheight + "px";
+    document.getElementById("add").style.height = windowheight + "px";
+    document.getElementsByTagName("footer")[0].style.height = (windowheight / 2) + "px";
+    console.log(document.getElementById("iframe_cover").style.height );
+    document.getElementById("iframe_cover").style.height = (windowheight-50) + "px";
+    console.log(document.getElementById("iframe_cover").style.height );
 }
