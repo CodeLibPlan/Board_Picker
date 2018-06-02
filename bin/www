@@ -9,14 +9,17 @@ var debug = require('debug')('board-picker:server');
 var http = require('http');
 var https = require('https');
 var fs = require('fs');
+var parser = require('./worker/board-parser');
+var notifier = require('./worker/notifier');
+var port_info = require('./info/ports');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || port_info().http);
 app.set('port', port);
-app.set('port_s', '443');
+app.set('port_s', port_info().https);
 
 /**
  * Load https key files
@@ -30,7 +33,7 @@ var options = {
  * Create HTTPS Server.
  */
 
-var https_server = https.createServer(options,app)
+var https_server = https.createServer(options,app);
 https_server.listen(app.get('port_s'));
 
 /**
