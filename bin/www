@@ -16,7 +16,7 @@ var fs = require('fs');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-app.set('port_s', '443');
+app.set('port_s', '4430');
 
 /**
  * Load https key files
@@ -30,7 +30,7 @@ var options = {
  * Create HTTPS Server.
  */
 
-var https_server = https.createServer(options,app)
+var https_server = https.createServer(options,app);
 https_server.listen(app.get('port_s'));
 
 /**

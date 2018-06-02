@@ -1,8 +1,92 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+    background-color: rgb(183, 183, 183);
+}
+header{
+    background-color:rgba(0, 183, 255, 0.3);
+}
+#add{
+    background-color:rgba(183, 255, 0, 0.3);
+}
+#show{
+    background-color: rgba(255, 183, 0, 0.3);
+}
+footer{
+    background-color:rgba(0, 255, 183, 0.3);
+}
+a:link, a:visited {
+    color:black;
+    text-decoration: none;
+}
+a:hover{
+    color:rgba(0,0,0,0.8);
+    text-decoration: none;
 }
 
-a {
-  color: #00B7FF;
+#logo{
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+#goto_add_button{
+    background-color:rgb(183, 255, 0);
+}
+#goto_show_button{
+    background-color:rgb(255, 183, 0);
+}
+#goto_add_button, #goto_show_button{
+    width:35%;
+    height:150px;
+    margin-top:100px;
+    margin-left:10%;
+    font-size:30px;
+}
+#goto_intro_from_add, #goto_intro_from_show{
+    width:35%;
+    font-size:30px;
+}
+#registered_list{
+    background-color:rgba(0, 0, 0, 0.05);
+    height:80%;
+    overflow:scroll;
+}
+#registered_list li{
+    background-color:rgba(0, 0, 0, 0.1);
+    margin-top:5px;
+    font-size:20px;
+}
+#registered_list li img{
+    height:30px;
+    float:right;
+    margin-right:10px;
+}
+#registered_list div{
+    border:3px solid rgba(150, 150, 150, 0.5);
+}
+.profile_img{
+    display:inline-block;
+    height:40px;
+}
+.profile_name{
+    display:inline-block;
+}
+.profile{
+    background-color:rgba(0, 0, 0, 0.05);
+    margin:10px;
+    display:inline-block;
+    height:50%;
+}
+footer h1{
+    margin-top:0px;
+    padding-top:30px;
+}
+#iframe_cover{
+    background-color: black;
+    height:100%;
+}
+#adder_iframe{
+    display:block;
+    background-color: white;
+    width: 100%;
+    height:100%;
+    border:0px solid black;
 }
