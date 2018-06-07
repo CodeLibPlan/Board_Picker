@@ -29,7 +29,7 @@ function goto(target){
             return;
         }
         window.scrollTo(0, window.pageYOffset+(idistance));
-        setTimeout(function(){a(innerspeed - 1, itarget, idistance)}, 10);//10밀리초마다 움직임
+        setTimeout(function(){a(innerspeed - 1, itarget, idistance)}, 10);//10밀리초마다 움직임.
     };
     a(speed, target, distance);
 }
