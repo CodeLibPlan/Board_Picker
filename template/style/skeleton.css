@@ -4,15 +4,18 @@ body{
 header{
     background-color:rgba(0, 183, 255, 0.3);
 }
-#add{
-    background-color:rgba(183, 255, 0, 0.3);
-}
-#show{
-    background-color: rgba(255, 183, 0, 0.3);
-}
 footer{
     background-color:rgba(0, 255, 183, 0.3);
 }
+/*추가 화면(section)*/
+#add{
+    background-color:rgba(183, 255, 0, 0.3);
+}
+/*목록 화면(section)*/
+#show{
+    background-color: rgba(255, 183, 0, 0.3);
+}
+/*링크 색상 변경(전역)*/
 a:link, a:visited {
     color:black;
     text-decoration: none;
@@ -21,12 +24,13 @@ a:hover{
     color:rgba(0,0,0,0.8);
     text-decoration: none;
 }
-
+/*로고 설정*/
 #logo{
     width:50%;
     margin-left:25%;
     margin-right:25%;
 }
+/*추가 화면 및 목록 화면으로 가는 버튼*/
 #goto_add_button{
     background-color:rgb(183, 255, 0);
 }
@@ -40,10 +44,12 @@ a:hover{
     margin-left:10%;
     font-size:30px;
 }
+/*처음으로 돌아가기 버튼*/
 #goto_intro_from_add, #goto_intro_from_show{
     width:35%;
     font-size:30px;
 }
+/*목록(리스트)*/
 #registered_list{
     background-color:rgba(0, 0, 0, 0.05);
     height:80%;
@@ -62,6 +68,7 @@ a:hover{
 #registered_list div{
     border:3px solid rgba(150, 150, 150, 0.5);
 }
+/*개발자 정보*/
 .profile_img{
     display:inline-block;
     height:40px;
@@ -79,6 +86,7 @@ footer h1{
     margin-top:0px;
     padding-top:30px;
 }
+/*iframe 설정*/
 #iframe_cover{
     background-color: black;
     height:100%;

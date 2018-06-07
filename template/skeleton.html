@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 인코딩 및 스타일시트, 스크립트 불러오기-->
     <meta charset="UTF-8">
     <title>Board Picker</title>
     <link rel="stylesheet" href="style/skeleton.css"/>
     <script type="text/javascript" src="script/script.js"></script>
 </head>
 <body>
-
+    <!-- 헤더 시작 -->
     <header>
         <img id="logo" src="image/logo.png" alt="로고">
         <button id="goto_show_button" onclick="goto_show(event)">등록된 알림 목록</button>
         <button id="goto_add_button" onclick="goto_add(event)">게시판 알림 등록하기</button>
     </header>
-
+    <!-- 헤더 끝 -->
+    <!-- 등록된 사이트 리스트-->
     <section id="show">
         <button id="goto_intro_from_show" onclick="goto_header(event)">처음으로</button>
         <ol id="registered_list">
             <li>추가된 페이지 리스트<img src="image/trash.png"></li><div></div>
         </ol>
     </section>
+    <!--새로운 사이트 등록하기-->
     <section id="add">
         <button id="goto_intro_from_add" onclick="goto_header(event)">처음으로</button>
+        <!--이 iframe은 추가 기능 구현 시 사용할 예정입니다.-->
         <div id="iframe_cover">
             <iframe id="adder_iframe" onload="resize_elements()" src="http://computer.cnu.ac.kr"></iframe>
         </div>
     </section>
+    <!--개발자 프로필 및 추가 정보-->
     <footer>
         <section>
             <h1>개발자</h1>
