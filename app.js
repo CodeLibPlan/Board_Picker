@@ -58,6 +58,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/register_worker', notiRouter);
 
 //왜 추가해둔건지? var requestTime =
 

@@ -9,8 +9,8 @@ var debug = require('debug')('board-picker:server');
 var http = require('http');
 var https = require('https');
 var fs = require('fs');
-var parser = require('./worker/board-parser');
-var notifier = require('./worker/notifier');
+var parser = require('./threads/board-parser');
+var notifier = require('./threads/notifier');
 var port_info = require('./info/ports');
 
 /**
