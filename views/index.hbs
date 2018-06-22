@@ -13,9 +13,10 @@
 </section>
 <section id="add">
     <div id="iframe_cover">
-        <iframe id="adder_iframe" onload="resize_elements()" src="https://computer.cnu.ac.kr/index.php?mid=notice"></iframe>
+        <iframe id="adder_iframe" onload="link_replace()" src="https://computer.cnu.ac.kr/index.php?mid=notice"></iframe>
     </div>
     <button id="goto_intro_from_add" onclick="goto_header(event)">처음으로</button>
+    <input id="addressbox" type="text" value="" onkeyup="if(event.keyCode==13)newPage(event);"/>
 </section>
 <footer>
     <section>
@@ -29,5 +30,5 @@
     </section>
 </footer>
 <script>
-    resize_elements();
+    init_elements();
 </script>

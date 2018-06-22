@@ -10,40 +10,8 @@ var fs = require('fs');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var notiRouter = require('./routes/notification');
-//web-push configuration
-var webPush = require('web-push');
 
-//web-push key read or set
-var publicKey = undefined;
-var privateKey = undefined;
-const GENERATE_NEW_KEY = false;
-if(GENERATE_NEW_KEY){
-    const vapidKeys = webPush.generateVAPIDKeys();
-    publicKey = vapidKeys.publicKey;
-    var stream_public = fs.createWriteStream('./key/publicKey');
-    stream_public.once('open', function(fd){
-        stream_public.write(vapidKeys.publicKey);
-        stream_public.end();
-    });
-    var stream_private = fs.createWriteStream('./key/privateKey');
-    privateKey = vapidKeys.privateKey;
-    stream_private.once('open', function(fd){
-        stream_private.write(vapidKeys.privateKey);
-        stream_private.end();
-    });
-}
-else{
-    publicKey = fs.readFileSync('./key/publicKey');
-    privateKey = fs.readFileSync('./key/privateKey');
-}
-//waiting for key read
-while(publicKey === undefined || privateKey === undefined){
-    console.log("waiting");
-}
-console.log("publicKey : ", publicKey.toString());
-console.log("privateKey: ", privateKey.toString());
-//web-push key setup
-webPush.setVapidDetails('mailto:clplanet26@gmail.com',publicKey.toString(),privateKey.toString());
+var parser = require('./bin/threads/board-parser');
 
 var app = express();
 // view engine setup
@@ -59,8 +27,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/register_worker', notiRouter);
+/*app.all('/notification',(req,res)=>{
+    res.send("asdf");
+});*/
 
-//왜 추가해둔건지? var requestTime =
+parser = new parser();
+console.log(parser.__proto__);
+app.use('/notification', parser.notifier.router);
+parser.run();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -76,14 +50,5 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-//web push를 app.js에 임시 구현 후 모듈화 할 예정
-app.post('/notification', (req, res) => {
-	var sub = req.body;
-	var testString = 'TEST';
-
-	webPush.sendNotification(sub, testString).catch(error => {
-		console.error(error.stack);
-	});
 });
 module.exports = app;

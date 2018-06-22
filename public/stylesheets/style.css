@@ -90,3 +90,9 @@ footer h1{
     height:100%;
     border:0px solid black;
 }
+
+#addressbox{
+    width:64%;
+    font-size:20px;
+
+}

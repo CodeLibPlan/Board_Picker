@@ -1,6 +1,6 @@
 module.exports = function(){
     return {
-        "https" : 443,
-        "http"  : 3000
+        "https" : '443',
+        "http"  : '3000'
     };
 }
